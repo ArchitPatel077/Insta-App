@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19150" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="aM8-z1-HfI">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19134"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Insta_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tabBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FKD-s7-hGj">
+                                <rect key="frame" x="0.0" y="813" width="414" height="49"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <items>
+                                    <tabBarItem id="cCI-UW-gRS">
+                                        <imageReference key="image" image="home_unselected"/>
+                                        <imageReference key="selectedImage" image="home_selected"/>
+                                        <offsetWrapper key="titlePositionAdjustment" horizontal="-10" vertical="44"/>
+                                    </tabBarItem>
+                                    <tabBarItem title="" id="WK8-dl-dZz">
+                                        <imageReference key="image" image="search_unselected"/>
+                                        <imageReference key="selectedImage" image="search_selected"/>
+                                    </tabBarItem>
+                                    <tabBarItem title="" id="eVR-YZ-qIq">
+                                        <imageReference key="image" image="plus_unselected"/>
+                                        <imageReference key="selectedImage" image="plus_unselected"/>
+                                    </tabBarItem>
+                                    <tabBarItem title="" id="0rU-BO-Rck">
+                                        <imageReference key="image" image="like_unselected"/>
+                                        <imageReference key="selectedImage" image="like_selected"/>
+                                    </tabBarItem>
+                                    <tabBarItem id="aa2-Y9-lqj">
+                                        <imageReference key="image" image="profile_unselected"/>
+                                        <imageReference key="selectedImage" image="profile_selected"/>
+                                    </tabBarItem>
+                                </items>
+                                <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <tabBarAppearance key="standardAppearance"/>
+                            </tabBar>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2fW-kV-TpE">
+                                <rect key="frame" x="159" y="268" width="97" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="FKD-s7-hGj" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="8xW-ut-rPr"/>
+                            <constraint firstItem="FKD-s7-hGj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="os9-t9-NHi"/>
+                            <constraint firstAttribute="bottom" secondItem="FKD-s7-hGj" secondAttribute="bottom" constant="34" id="r2m-Yo-DNZ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="P0a-VP-g0u"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="979.71014492753636" y="61.607142857142854"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="PrC-2g-GkS">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="aM8-z1-HfI" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="R2C-cS-YlE">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="GTo-QA-8qL"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Hv-dA-s61" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="69.565217391304358" y="61.607142857142854"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="home_selected" width="22" height="22"/>
+        <image name="home_unselected" width="22" height="22"/>
+        <image name="like_selected" width="22" height="19"/>
+        <image name="like_unselected" width="22" height="18.5"/>
+        <image name="plus_unselected" width="21" height="21"/>
+        <image name="profile_selected" width="22" height="22"/>
+        <image name="profile_unselected" width="22" height="22"/>
+        <image name="search_selected" width="22" height="22"/>
+        <image name="search_unselected" width="22" height="22"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
