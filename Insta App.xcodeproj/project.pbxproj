@@ -20,6 +20,8 @@
 		732C6B1B26B87961005E950C /* ImageSelectorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 732C6B1A26B87961005E950C /* ImageSelectorController.swift */; };
 		732C6B1D26B87989005E950C /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 732C6B1C26B87989005E950C /* NotificationController.swift */; };
 		732C6B1F26B8799C005E950C /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 732C6B1E26B8799C005E950C /* ProfileController.swift */; };
+		7333648826EEB951008EAA44 /* ProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7333648726EEB951008EAA44 /* ProfileCell.swift */; };
+		7333648A26EEB96C008EAA44 /* ProfileHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7333648926EEB96C008EAA44 /* ProfileHeader.swift */; };
 		73F9290226BB2A27009E49C5 /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73F9290126BB2A27009E49C5 /* FeedCell.swift */; };
 		73F9290626BB2B79009E49C5 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73F9290526BB2B79009E49C5 /* Extensions.swift */; };
 		73F9290926BB3807009E49C5 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73F9290826BB3807009E49C5 /* LoginController.swift */; };
@@ -47,6 +49,8 @@
 		732C6B1A26B87961005E950C /* ImageSelectorController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSelectorController.swift; sourceTree = "<group>"; };
 		732C6B1C26B87989005E950C /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
 		732C6B1E26B8799C005E950C /* ProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
+		7333648726EEB951008EAA44 /* ProfileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCell.swift; sourceTree = "<group>"; };
+		7333648926EEB96C008EAA44 /* ProfileHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeader.swift; sourceTree = "<group>"; };
 		73F9290126BB2A27009E49C5 /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
 		73F9290526BB2B79009E49C5 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		73F9290826BB3807009E49C5 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
@@ -161,6 +165,7 @@
 		732C6B1226B8763D005E950C /* View */ = {
 			isa = PBXGroup;
 			children = (
+				7333648B26EEB976008EAA44 /* Profile */,
 				73F9290126BB2A27009E49C5 /* FeedCell.swift */,
 				73F9290C26BB43CA009E49C5 /* CustomeTextField.swift */,
 			);
@@ -172,6 +177,15 @@
 			children = (
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		7333648B26EEB976008EAA44 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				7333648726EEB951008EAA44 /* ProfileCell.swift */,
+				7333648926EEB96C008EAA44 /* ProfileHeader.swift */,
+			);
+			path = Profile;
 			sourceTree = "<group>";
 		};
 		73F9290726BB37EB009E49C5 /* Authentication */ = {
@@ -309,6 +323,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				732C6AFD26B875C2005E950C /* ViewController.swift in Sources */,
+				7333648A26EEB96C008EAA44 /* ProfileHeader.swift in Sources */,
 				73F9290926BB3807009E49C5 /* LoginController.swift in Sources */,
 				73F9290226BB2A27009E49C5 /* FeedCell.swift in Sources */,
 				732C6B1B26B87961005E950C /* ImageSelectorController.swift in Sources */,
@@ -323,6 +338,7 @@
 				73F9290626BB2B79009E49C5 /* Extensions.swift in Sources */,
 				73F9293326C5A5DD009E49C5 /* ImageUploader.swift in Sources */,
 				73F9293526C5A5EF009E49C5 /* AuthService.swift in Sources */,
+				7333648826EEB951008EAA44 /* ProfileCell.swift in Sources */,
 				732C6AFB26B875C2005E950C /* SceneDelegate.swift in Sources */,
 				73F9290B26BB3820009E49C5 /* RegistrationController.swift in Sources */,
 			);
@@ -482,6 +498,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -511,6 +528,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

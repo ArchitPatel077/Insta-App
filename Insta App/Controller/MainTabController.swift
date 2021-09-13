@@ -17,7 +17,7 @@ class MainTabController : UITabBarController {
         
        configureViewControllers()
         checkIfUserIsLoggedIn()
-        logout()
+
         
     }
     
@@ -32,14 +32,6 @@ class MainTabController : UITabBarController {
                 nav.modalPresentationStyle = .fullScreen
                 self.present(nav, animated: true, completion: nil)
             }
-        }
-    }
-    
-    func logout() {
-        do{
-            try Auth.auth().signOut()
-        } catch {
-            print("DEBUG: Failed to sigh out")
         }
     }
     
@@ -59,7 +51,8 @@ class MainTabController : UITabBarController {
         
         let notification = templateNavigationController(unselectedImage: UIImage(named: "like_unselected")!, selectedImage: UIImage(named: "like_selected")!, rootViewController:NotificationController())
         
-        let profile = templateNavigationController(unselectedImage: UIImage(named: "profile_unselected")!, selectedImage: UIImage(named: "profile_selected")!, rootViewController: ProfileController())
+        let profileLayout = UICollectionViewFlowLayout()
+        let profile = templateNavigationController(unselectedImage: UIImage(named: "profile_unselected")!, selectedImage: UIImage(named: "profile_selected")!, rootViewController: ProfileController(collectionViewLayout: profileLayout))
         
         viewControllers = [feed, search, imageSelector, notification, profile]
         
