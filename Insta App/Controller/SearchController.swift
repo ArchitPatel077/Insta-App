@@ -84,7 +84,9 @@ extension SearchController {
 //MARK: - UITableViewDelegate
 
 extension SearchController {
+    
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
         
         let controller = ProfileController(user: users[indexPath.row])
         navigationController?.pushViewController(controller, animated: true)
@@ -98,7 +100,7 @@ extension SearchController : UISearchResultsUpdating {
         
         guard let searchText = searchController.searchBar.text?.lowercased() else {return}
         
-        filteredUsers = users.filter({$0.username.contains(searchText) || $0.fullname.lowercased().contains(searchText)})
+        filteredUsers = users.filter({$0.username.contains(searchText) || $0.fullname.contains(searchText)})
         
         self.tableView.reloadData()
     }

@@ -8,12 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		72B2E490CB4507BB50D5FC6B /* Pods_Insta_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C59DC62649F2D2F8B731649E /* Pods_Insta_App.framework */; };
+		7310FD3826F3C83A00C394EF /* UploadPostController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7310FD3726F3C83A00C394EF /* UploadPostController.swift */; };
+		7310FD3A26F3CC4B00C394EF /* InputTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7310FD3926F3CC4B00C394EF /* InputTextView.swift */; };
+		7310FD3C26F3E71900C394EF /* PostService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7310FD3B26F3E71900C394EF /* PostService.swift */; };
 		7322F37126F007FE0076494A /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7322F37026F007FE0076494A /* UserService.swift */; };
 		7322F37326F0084D0076494A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7322F37226F0084D0076494A /* Constants.swift */; };
 		7322F37526F00A620076494A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7322F37426F00A620076494A /* User.swift */; };
 		7322F37726F00E4D0076494A /* ProfileHeaderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7322F37626F00E4D0076494A /* ProfileHeaderViewModel.swift */; };
 		7322F39326F13E4E0076494A /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7322F39226F13E4E0076494A /* UserCell.swift */; };
 		7322F3AF26F281B30076494A /* UserCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7322F3AE26F281B30076494A /* UserCellViewModel.swift */; };
+		73297D5626F51FEB003C2D0F /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73297D5526F51FEB003C2D0F /* Post.swift */; };
+		73297D5826F523CF003C2D0F /* PostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73297D5726F523CF003C2D0F /* PostViewModel.swift */; };
 		732C6AF926B875C2005E950C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 732C6AF826B875C2005E950C /* AppDelegate.swift */; };
 		732C6AFB26B875C2005E950C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 732C6AFA26B875C2005E950C /* SceneDelegate.swift */; };
 		732C6AFD26B875C2005E950C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 732C6AFC26B875C2005E950C /* ViewController.swift */; };
@@ -41,12 +46,17 @@
 
 /* Begin PBXFileReference section */
 		6D15C7F1E57B1E26FB702E51 /* Pods-Insta App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Insta App.debug.xcconfig"; path = "Target Support Files/Pods-Insta App/Pods-Insta App.debug.xcconfig"; sourceTree = "<group>"; };
+		7310FD3726F3C83A00C394EF /* UploadPostController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadPostController.swift; sourceTree = "<group>"; };
+		7310FD3926F3CC4B00C394EF /* InputTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputTextView.swift; sourceTree = "<group>"; };
+		7310FD3B26F3E71900C394EF /* PostService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostService.swift; sourceTree = "<group>"; };
 		7322F37026F007FE0076494A /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		7322F37226F0084D0076494A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		7322F37426F00A620076494A /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		7322F37626F00E4D0076494A /* ProfileHeaderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderViewModel.swift; sourceTree = "<group>"; };
 		7322F39226F13E4E0076494A /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 		7322F3AE26F281B30076494A /* UserCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCellViewModel.swift; sourceTree = "<group>"; };
+		73297D5526F51FEB003C2D0F /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		73297D5726F523CF003C2D0F /* PostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewModel.swift; sourceTree = "<group>"; };
 		732C6AF526B875C2005E950C /* Insta App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Insta App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		732C6AF826B875C2005E950C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		732C6AFA26B875C2005E950C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -140,6 +150,7 @@
 			children = (
 				73F9290526BB2B79009E49C5 /* Extensions.swift */,
 				7322F37226F0084D0076494A /* Constants.swift */,
+				7310FD3926F3CC4B00C394EF /* InputTextView.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -150,6 +161,7 @@
 				73F9293226C5A5DD009E49C5 /* ImageUploader.swift */,
 				73F9293426C5A5EF009E49C5 /* AuthService.swift */,
 				7322F37026F007FE0076494A /* UserService.swift */,
+				7310FD3B26F3E71900C394EF /* PostService.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -164,6 +176,7 @@
 				732C6B1A26B87961005E950C /* ImageSelectorController.swift */,
 				732C6B1C26B87989005E950C /* NotificationController.swift */,
 				732C6B1E26B8799C005E950C /* ProfileController.swift */,
+				7310FD3726F3C83A00C394EF /* UploadPostController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -174,6 +187,7 @@
 				73F9290E26BC8E1D009E49C5 /* AuthenticationViewModel.swift */,
 				7322F37626F00E4D0076494A /* ProfileHeaderViewModel.swift */,
 				7322F3AE26F281B30076494A /* UserCellViewModel.swift */,
+				73297D5726F523CF003C2D0F /* PostViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -193,6 +207,7 @@
 			isa = PBXGroup;
 			children = (
 				7322F37426F00A620076494A /* User.swift */,
+				73297D5526F51FEB003C2D0F /* Post.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -340,8 +355,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				73297D5826F523CF003C2D0F /* PostViewModel.swift in Sources */,
 				732C6AFD26B875C2005E950C /* ViewController.swift in Sources */,
 				7333648A26EEB96C008EAA44 /* ProfileHeader.swift in Sources */,
+				7310FD3826F3C83A00C394EF /* UploadPostController.swift in Sources */,
 				73F9290926BB3807009E49C5 /* LoginController.swift in Sources */,
 				73F9290226BB2A27009E49C5 /* FeedCell.swift in Sources */,
 				732C6B1B26B87961005E950C /* ImageSelectorController.swift in Sources */,
@@ -354,13 +371,16 @@
 				7322F37526F00A620076494A /* User.swift in Sources */,
 				732C6B1F26B8799C005E950C /* ProfileController.swift in Sources */,
 				7322F37726F00E4D0076494A /* ProfileHeaderViewModel.swift in Sources */,
+				7310FD3A26F3CC4B00C394EF /* InputTextView.swift in Sources */,
 				7322F37326F0084D0076494A /* Constants.swift in Sources */,
 				732C6B1726B87928005E950C /* FeedController.swift in Sources */,
 				7322F3AF26F281B30076494A /* UserCellViewModel.swift in Sources */,
 				732C6B1526B876F2005E950C /* MainTabController.swift in Sources */,
 				73F9290626BB2B79009E49C5 /* Extensions.swift in Sources */,
 				73F9293326C5A5DD009E49C5 /* ImageUploader.swift in Sources */,
+				73297D5626F51FEB003C2D0F /* Post.swift in Sources */,
 				73F9293526C5A5EF009E49C5 /* AuthService.swift in Sources */,
+				7310FD3C26F3E71900C394EF /* PostService.swift in Sources */,
 				7322F37126F007FE0076494A /* UserService.swift in Sources */,
 				7333648826EEB951008EAA44 /* ProfileCell.swift in Sources */,
 				732C6AFB26B875C2005E950C /* SceneDelegate.swift in Sources */,

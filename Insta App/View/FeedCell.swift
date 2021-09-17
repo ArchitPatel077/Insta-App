@@ -11,6 +11,12 @@ class FeedCell : UICollectionViewCell {
     
     //MARK: - Properties
     
+    var viewModel : PostViewModel? {
+        didSet{
+            configure()
+        }
+    }
+    
 //    ProfileImageView Prop
     
     private let profileImageView: UIImageView = {
@@ -18,7 +24,8 @@ class FeedCell : UICollectionViewCell {
         iv.contentMode = .scaleAspectFill
         iv.clipsToBounds = true
         iv.isUserInteractionEnabled = true
-        iv.image = UIImage(named: "venom-7")
+//        iv.image = UIImage(named: "venom-7")
+        iv.backgroundColor = .lightGray
         return iv
     }()
     
@@ -26,7 +33,7 @@ class FeedCell : UICollectionViewCell {
     private lazy var usernameButton : UIButton = {
         let button = UIButton(type: .system)
         button.setTitleColor(.black, for: .normal)
-        button.setTitle("Venom", for: .normal)
+//        button.setTitle("Venom", for: .normal)
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 13)
         button.addTarget(self, action: #selector(didTapUsername), for: .touchUpInside)
         return button
@@ -64,14 +71,14 @@ class FeedCell : UICollectionViewCell {
     
     private let likesLabel : UILabel = {
         let label = UILabel()
-        label.text = "1 Like"
+//        label.text = "1 Like"
         label.font = UIFont.boldSystemFont(ofSize: 13)
         return label
     }()
     
     private let captionLabel : UILabel = {
         let label = UILabel()
-        label.text = "Some test caption for now..."
+//        label.text = "Some test caption for now..."
         label.font = UIFont.systemFont(ofSize: 14)
         return label
     }()
@@ -139,5 +146,18 @@ class FeedCell : UICollectionViewCell {
         
         addSubview(stackView)
         stackView.anchor(top: postImageView.bottomAnchor, width: 120, height: 50)
+    }
+    
+    func configure(){
+        
+        guard let viewModel = viewModel else {return}
+        
+        captionLabel.text = viewModel.caption
+        postImageView.sd_setImage(with: viewModel.imageUrl)
+        likesLabel.text = viewModel.likesLabelText
+        
+        profileImageView.sd_setImage(with: viewModel.userProfileImageUrl)
+        usernameButton.setTitle(viewModel.username, for: .normal)
+        
     }
 }
