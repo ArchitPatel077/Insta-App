@@ -79,6 +79,8 @@ class LoginController : UIViewController {
         
        configureUI()
        configureNotificationObservers()
+        self.emailTextField.delegate = self
+        self.passwordTextField.delegate = self
     }
     
     //MARK: - Actions
@@ -157,5 +159,14 @@ extension LoginController : FormViewModel {
         loginButton.backgroundColor = viewModel.buttonBackgroundColor
         loginButton.setTitleColor(viewModel.buttonTitleColor, for: .normal)
         loginButton.isEnabled = viewModel.formIsValid
+    }
+}
+
+
+extension LoginController : UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        
+        textField.resignFirstResponder()
+        return true
     }
 }

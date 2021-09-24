@@ -74,6 +74,11 @@ class RegistratioinController : UIViewController {
         
         configureUI()
         configureNotificationObservers()
+        
+        self.emailTextField.delegate = self
+        self.passwordTextField.delegate = self
+        self.usernameTextField.delegate = self
+        self.fullnameTextField.delegate = self
     }
     
     //MARK: - Actions
@@ -188,5 +193,13 @@ extension RegistratioinController : UIImagePickerControllerDelegate, UINavigatio
         plusPhotoButton.setImage(selectedImage.withRenderingMode(.alwaysOriginal), for: .normal)
         self.dismiss(animated: true, completion: nil)
         
+    }
+}
+
+extension RegistratioinController : UITextFieldDelegate {
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
 }

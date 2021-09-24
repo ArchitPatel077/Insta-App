@@ -18,7 +18,7 @@ class SearchController : UITableViewController {
     private let searchController = UISearchController(searchResultsController: nil)
     
     private var inSearchMode : Bool {
-        return searchController.isActive && searchController.searchBar.text!.isEmpty
+        return searchController.isActive && !searchController.searchBar.text!.isEmpty
     }
     
     //MARK: - Lifecycle
@@ -43,7 +43,7 @@ class SearchController : UITableViewController {
     func configureSearchController() {
         searchController.searchResultsUpdater = self
         searchController.obscuresBackgroundDuringPresentation = false
-        searchController.hidesNavigationBarDuringPresentation = false
+        searchController.hidesNavigationBarDuringPresentation = true
         searchController.searchBar.placeholder = "Search"
         navigationItem.searchController = searchController
         definesPresentationContext = false
@@ -87,8 +87,8 @@ extension SearchController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        
-        let controller = ProfileController(user: users[indexPath.row])
+        let user = isEditing ? filteredUsers[indexPath.row] : users[indexPath.row] 
+        let controller = ProfileController(user: user)
         navigationController?.pushViewController(controller, animated: true)
     }
 }
@@ -100,7 +100,7 @@ extension SearchController : UISearchResultsUpdating {
         
         guard let searchText = searchController.searchBar.text?.lowercased() else {return}
         
-        filteredUsers = users.filter({$0.username.contains(searchText) || $0.fullname.contains(searchText)})
+        filteredUsers = users.filter({$0.username.contains(searchText) || $0.fullname.lowercased().contains(searchText)})
         
         self.tableView.reloadData()
     }
