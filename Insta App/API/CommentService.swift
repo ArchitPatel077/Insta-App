@@ -33,6 +33,7 @@ struct CommentService {
                     let data = change.document.data()
                     let comment = Comment(dictionary: data)
                     comments.append(comment)
+                    print(comment.commentText)
                 }
             })
             

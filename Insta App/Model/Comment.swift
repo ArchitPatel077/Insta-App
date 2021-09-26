@@ -19,7 +19,7 @@ struct Comment{
         self.uid = dictionary["uid"] as? String ?? ""
         self.username = dictionary["username"] as? String ?? ""
         self.profileImageUrl = dictionary["profileImageUrl"] as? String ?? ""
-        self.commentText = dictionary["commentText"] as? String ?? ""
+        self.commentText = dictionary["comment"] as? String ?? ""
         self.timeStamp = dictionary["timestamp"] as? Timestamp ?? Timestamp(date: Date())
     }
     
