@@ -10,6 +10,7 @@ import UIKit
 protocol FeedCellDelegate : AnyObject {
     
     func cell(_ cell: FeedCell, cellWantsToShowComments post : Post)
+    func cell(_ cell: FeedCell, didLike post: Post)
 }
 
 class FeedCell : UICollectionViewCell {
@@ -55,10 +56,11 @@ class FeedCell : UICollectionViewCell {
         return iv
     }()
     
-    private lazy var likeButton : UIButton = {
+     lazy var likeButton : UIButton = {
         let button = UIButton(type: .system)
         button.setImage(UIImage(named: "like_unselected"), for: .normal)
         button.tintColor = .black
+        button.addTarget(self, action: #selector(didTapLike), for: .touchUpInside)
         return button
     }()
     
@@ -131,6 +133,8 @@ class FeedCell : UICollectionViewCell {
         addSubview(postTimeLabel)
        postTimeLabel.anchor(top: captionLabel.bottomAnchor, left: leftAnchor, paddingTop: 8, paddingLeft: 8)
         
+        
+        
     }
     
     required init?(coder: NSCoder) {
@@ -150,6 +154,13 @@ class FeedCell : UICollectionViewCell {
         
         delegate?.cell(self, cellWantsToShowComments: viewModel.post)
 
+    }
+    
+    @objc func didTapLike() {
+        guard let viewModel = viewModel else {
+            return
+        }
+        delegate?.cell(self, didLike: viewModel.post)
     }
     
     //MARK: - Helpers
@@ -174,6 +185,10 @@ class FeedCell : UICollectionViewCell {
         
         profileImageView.sd_setImage(with: viewModel.userProfileImageUrl)
         usernameButton.setTitle(viewModel.username, for: .normal)
+        
+        likesLabel.text = viewModel.likesLabelText
+        likeButton.tintColor = viewModel.likesButtonTintColor
+        likeButton.setImage(viewModel.likeButtonImage, for: .normal)
         
     }
 }
