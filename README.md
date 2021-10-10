@@ -1,7 +1,7 @@
 # Insta-App
 
 - Home & Explore Feed 
-Home Feed, Posts from followers, Everything is Fully integrated with Firebase back , Add a comment ,Real time Comment count,  end, Explore  feed
+Home Feed, Posts from followers, Everything is Fully integrated with Firebase backend , Add a comment ,Real time Comment count, Explore  feed
 
 - Posts
 Create a new post, Multiple photo uploads, Integration with Firebase Auth & Firebase Storage, Import photo from library, Delete post, Post details with Comment lists
