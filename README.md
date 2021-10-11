@@ -25,5 +25,5 @@ Profile photos, Friends List, Settings, Edit Profile
 
 
 
-![IMG_0109](https://user-images.githubusercontent.com/79483153/136829646-8dc61071-fece-43f8-9391-6462f8ea627a.PNG)
+
 
