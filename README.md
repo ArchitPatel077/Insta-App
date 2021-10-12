@@ -41,10 +41,10 @@ Follow/ Unfollow/ Follow back
 ### Profiles
 Profile photos,
 Friends List,
-Settings, Edit Profile
+Settings,
+Edit Profile
 
 ### Push Notifications
-
 
 
 
