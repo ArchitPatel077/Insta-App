@@ -46,7 +46,6 @@ Edit Profile
 
 ### Push Notifications
 
-![IMG_0103](https://user-images.githubusercontent.com/79483153/137399933-de63c407-b04d-4536-adb0-12a8f8b8dca8.PNG)
 
 
 
